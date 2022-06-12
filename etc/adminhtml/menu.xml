@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="WMZ_Bypass2FA::menu"
+             title="Bypass 2FA"
+             module="WMZ_Bypass2FA"
+             sortOrder="50"
+             resource="WMZ_Bypass2FA::menu"
+             parent="WMZ_Core::wmz"
+        />
+        <add id="WMZ_Bypass2FA::configuration"
+             title="Configuration"
+             module="WMZ_Bypass2FA"
+             sortOrder="10"
+             action="adminhtml/system_config/edit/section/bypass2fa"
+             resource="WMZ_Bypass2FA::config"
+             parent="WMZ_Bypass2FA::menu"
+        />
+    </menu>
+</config>

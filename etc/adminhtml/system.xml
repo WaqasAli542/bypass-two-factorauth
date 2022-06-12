@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="bypass2fa" translate="label" sortOrder="140" showInDefault="1" showInWebsite="0" showInStore="0">
+            <class>separator-top</class>
+            <label>Bypass 2FA</label>
+            <tab>wmz</tab>
+            <resource>WMZ_Bypass2FA::configuration</resource>
+            <group id="admin_users" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0"
+                   showInStore="0">
+                <label>Configuration</label>
+                <field id="multi_users_by_pass_2fa" translate="label" type="multiselect" sortOrder="1" showInDefault="1"
+                       showInWebsite="0" showInStore="0">
+                    <label>Admin Users To By Pass 2FA</label>
+                    <source_model>WMZ\Bypass2FA\Model\Config\Source\UsersToByPass2FA</source_model>
+                    <can_be_empty>1</can_be_empty>
+                    <comment>The selected magento admin users in above dropdown won't be required to setup or enter 2FA code for logging in</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
